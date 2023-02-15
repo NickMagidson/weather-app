@@ -1,5 +1,5 @@
-import React from 'react'
-import './App.css'
+import React from "react";
+
 import {
   MDBCard,
   MDBCardBody,
@@ -10,12 +10,10 @@ import {
   MDBTypography,
 } from "mdb-react-ui-kit";
 
-function App() {
-
-
+export default function App() {
   return (
-    <section className="vh-100" style={{ backgroundColor: "#4B515D" }}>
-      <MDBContainer className="h-100">
+    <section className="vh-100 vw-100" style={{ backgroundColor: "#4B515D" }}>
+      <MDBContainer className="h-100 ">
         <MDBRow className="justify-content-center align-items-center h-100">
           <MDBCol md="8" lg="6" xl="4">
             <MDBCard style={{ color: "#4B515D", borderRadius: "35px" }}>
@@ -81,7 +79,5 @@ function App() {
         </MDBRow>
       </MDBContainer>
     </section>
-  )
+  );
 }
-
-export default App
