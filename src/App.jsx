@@ -10,6 +10,15 @@ import {
   MDBTypography,
 } from "mdb-react-ui-kit";
 
+
+
+
+const apiCall = fetch(`https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=67224de3b5da9b6e57e30c7be68cd834`)
+.then(response => response.json())
+.then(data => console.log(data))
+
+
+
 export default function App() {
   return (
     <section className="vh-100 vw-100" style={{ backgroundColor: "#4B515D" }}>
@@ -18,10 +27,9 @@ export default function App() {
           <MDBCol md="8" lg="6" xl="4">
             <MDBCard style={{ color: "#4B515D", borderRadius: "35px" }}>
               <MDBCardBody className="p-4">
+
                 <div className="d-flex">
-                  <MDBTypography tag="h6" className="flex-grow-1">
-                    Warsaw
-                  </MDBTypography>
+                  <MDBTypography tag="h6" className="flex-grow-1">Warsaw</MDBTypography>
                   <MDBTypography tag="h6">15:07</MDBTypography>
                 </div>
 
@@ -49,6 +57,7 @@ export default function App() {
                       />{" "}
                       <span className="ms-1"> 40 km/h</span>
                     </div>
+
                     <div>
                       <MDBIcon
                         fas
@@ -57,6 +66,7 @@ export default function App() {
                       />{" "}
                       <span className="ms-1"> 84% </span>
                     </div>
+
                     <div>
                       <MDBIcon
                         fas
@@ -66,6 +76,7 @@ export default function App() {
                       <span className="ms-1"> 0.2h </span>
                     </div>
                   </div>
+                  
                   <div>
                     <img
                       src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
